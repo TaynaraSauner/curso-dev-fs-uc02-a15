@@ -25,10 +25,13 @@ dd {
 
 body {
     font-family: 'Embed code' 'Albert Sans', 'Arial', 'Helvetica', 'serif';
-    width: 70vw;
+    width: 65vw;
     height: auto;
-    max-width: 70vw;
-    background-color: #9a291d;
+    max-width: 65vw;
+    background-color: rgb(121, 21, 21);
+    background: linear-gradient(0deg, rgba(121, 21, 21, 1) 38%,
+            rgba(0, 0, 0, 1) 100%);
+    ;
     margin: 0 auto;
     color: #ffffff;
 }
@@ -76,9 +79,9 @@ body {
 }
 
 #titulo img {
-    width: 70%;
+    width: 60%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 #conteudo {
@@ -98,4 +101,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.margens-titulos {
+    margin: 15px 0;
+}
+
+/* alinhar os numeros da lista numerada de modo de preparo */
+
+#modo-preparo ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-bottom: 10px;   
 }

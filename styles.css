@@ -29,9 +29,8 @@ body {
     height: auto;
     max-width: 65vw;
     background-color: rgb(121, 21, 21);
-    background: linear-gradient(0deg, rgba(121, 21, 21, 1) 38%,
-            rgba(0, 0, 0, 1) 100%);
-    ;
+    background: rgb(151, 0, 0);
+    background: radial-gradient(circle, rgba(151, 0, 0, 1) 0%, rgba(54, 0, 0, 1) 56%, rgba(0, 0, 0, 1) 100%);
     margin: 0 auto;
     color: #ffffff;
 }
@@ -45,6 +44,7 @@ body {
 }
 
 #menu ul {
+    width: 100%;
     display: flex;
     /* flex-direction: row; por que quando coloca o flex automaticamente ele fica em linha*/
     justify-content: space-around;
@@ -76,12 +76,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-items: center;
 }
 
 #titulo img {
     width: 60%;
     height: auto;
     border-radius: 5px;
+    margin: 10px 0;
 }
 
 #conteudo {
@@ -101,16 +103,64 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
 }
 
 .margens-titulos {
     margin: 15px 0;
 }
 
+#ingredientes ul li {
+    list-style-position: inside;
+}
+
+
 /* alinhar os numeros da lista numerada de modo de preparo */
 
 #modo-preparo ol li {
     list-style-type: decimal;
     list-style-position: inside;
-    margin-bottom: 10px;   
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &::marker {
+        font-weight: 800;
+    }
 }
+
+@media(max-width: 600px) {
+    body {
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    #menu {
+        height: 50px;
+    }
+
+    #menu ul {
+        justify-content: space-evenly;
+
+    }
+
+    #menu ul i a {
+        font-size: 18px;
+    }
+
+    #titulo h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #conteudo {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px;
+    }
+}
+
